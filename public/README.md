@@ -25,7 +25,19 @@ Please check the examples for better understanding of the common use cases. The 
 the TomTom map could look like this:
 
 ```html
-
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="map.css"/>
+        <script src="tomtom.min.js"></script>
+    </head>
+    <body style="width: 100%; height: 100%; margin: 0; padding: 0;">
+        <div id="map" style="width: 100%; height: 100%;"></div>
+        <script>
+            tomtom.key("${api.key}");
+            var map = tomtom.map("map");
+        </script>
+    </body>
+</html>
 ```
 
 Please note that you need to have a valid **api key** which can be obtained at [TomTom's Developer Portal](http://developer.tomtom.com).
